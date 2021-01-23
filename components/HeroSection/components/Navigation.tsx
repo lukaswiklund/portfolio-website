@@ -3,21 +3,21 @@ import styled from "styled-components"
 
 const Container = styled.nav`
 	position: absolute;
-	top: 25%;
-	left: 50%;
-	bottom: 0;
+	top: 0;
+	left: 0;
 	right: 0;
-	padding: 0 64px;
+	padding: 32px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
 `
 
 const Button = styled.a`
 	color: white;
+	font-size: 16px;
 	text-decoration: none;
 	transition: .2s color;
-
-	&:not(:last-child) {
-		margin-right: 46px;
-	}
+	margin: 0 26px;
 
 	&:hover {
 		color: #cdcdcd;
@@ -26,10 +26,15 @@ const Button = styled.a`
 
 const Navigation = () =>
 	<Container>
-		<Button href="#">Home</Button>
-		<Button href="#">Projects</Button>
-		<Button href="#">About Me</Button>
-		<Button href="#">LinkedIn</Button>
+		<Button target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lukas-wiklund/">
+			LinkedIn
+		</Button>
+		<Button target="_blank" rel="noopener noreferrer" href="https://github.com/Hadermite">
+			GitHub
+		</Button>
+		<Button target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LukasEGWiklund/">
+			Facebook
+		</Button>
 	</Container>
 
 export default Navigation

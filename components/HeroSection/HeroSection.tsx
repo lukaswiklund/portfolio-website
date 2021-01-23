@@ -1,4 +1,7 @@
+import { useEffect } from "react"
 import styled from "styled-components"
+import { tsParticles } from "tsparticles"
+
 import Navigation from "./components/Navigation"
 
 
@@ -7,90 +10,127 @@ const Section = styled.section`
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 `
 
-const BackgroundImage = styled.div`
+const Particles = styled.div`
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
-	right: 50%;
-	z-index: -1;
-	background-image: url("/hero-background.jpg");
-	background-size: cover;
-	background-position: center;
-	filter: brightness(0.2);
-`
-
-const BackgroundColor = styled.div`
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 50%;
 	right: 0;
 	z-index: -1;
 	background-color: black;
 `
 
-const TitleContainer = styled.div`
+const ContentWrapper = styled.div`
+	flex-basis: 50%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
 `
 
-const Name = styled.h1`
+const Content = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+`
+
+const Title = styled.h1`
 	color: white;
-	font-size: 46px;
-	font-weight: normal;
+	font-family: "Overpass", sans-serif;
+	font-size: 6.7vw;
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: 0.8vw;
+`
+
+const Name = styled.span`
+	display: block;
+	margin-left: 2vw;
+`
+
+const Subtitle = styled.p`
+	color: white;
+	font-family: "Overpass", sans-serif;
+	font-size: 1.6vw;
+	text-transform: lowercase;
 	align-self: flex-start;
-	line-height: 1;
-	margin-bottom: 8px;
+	margin-bottom: 1.6vw;
 `
 
-const Title = styled.p`
-	color: #FFCB1E;
-	font-size: 72px;
-	text-transform: uppercase;
-	font-weight: bold;
-	line-height: 1;
-	margin-bottom: 8px;
+const Picture = styled.div`
+	flex-basis: 50%;
+	background-image: url("/lukas.png");
+	background-repeat: no-repeat;
+	background-position: 50% 60%;
+	background-size: 60%;
 `
 
-const Nickname = styled.p`
-	color: white;
-	font-size: 24px;
-	font-weight: normal;
-	align-self: flex-end;
-	line-height: 1;
-`
+const HeroSection = () => {
+	useEffect(() => {
+		tsParticles.load("hero-particles", {
+			particles: {
+				number: {
+					value: 25,
+					density: {
+						enable: true,
+						value_area: 1000
+					}
+				},
+				color: {
+					value: "#ffffff"
+				},
+				size: {
+					value: 0,
+					anim: {
+						enable: false,
+						speed: 40,
+						size_min: 0.1,
+						sync: false
+					}
+				},
+				line_linked: {
+					enable: true,
+					distance: 150,
+					color: "#ffffff",
+					opacity: 0.4,
+					width: 1
+				},
+				move: {
+					enable: true,
+					speed: 2,
+					direction: "none",
+					random: false,
+					straight: false,
+					out_mode: "out",
+					bounce: false,
+					attract: {
+						enable: false,
+						rotateX: 600,
+						rotateY: 1200
+					}
+				}
+			},
+			retina_detect: true
+		})
+	}, [])
 
-const ScrollIndicator = styled.div`
-	position: absolute;
-	bottom: 32px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 32px;
-	height: 32spx;
-	color: white;
-`
-
-const HeroSection = () =>
-	<Section>
-		<BackgroundImage />
-		<BackgroundColor />
+	return <Section>
+		<Particles id="hero-particles" />
 		<Navigation />
-		<TitleContainer>
-			<Name>Lukas Wiklund</Name>
-			<Title>A Software Engineer.</Title>
-			<Nickname>Hadermite</Nickname>
-		</TitleContainer>
-		<ScrollIndicator>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-				<line x1="12" y1="5" x2="12" y2="19" />
-				<polyline points="19 12 12 19 5 12" />
-			</svg>
-		</ScrollIndicator>
+		<ContentWrapper>
+			<Content>
+				<Title>
+					Hi, I'm
+					<Name>Lukas W.</Name>
+				</Title>
+				<Subtitle>A Software Engineer</Subtitle>
+			</Content>
+		</ContentWrapper>
+		<Picture />
 	</Section>
+}
 
 export default HeroSection
