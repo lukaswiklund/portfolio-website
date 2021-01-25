@@ -6,10 +6,10 @@ const Container = styled.nav`
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 32px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
+	padding: 42px 0;
 `
 
 const Button = styled.a`
@@ -17,7 +17,7 @@ const Button = styled.a`
 	font-size: 16px;
 	text-decoration: none;
 	transition: .2s color;
-	margin: 0 26px;
+	padding: 26px;
 
 	&:hover {
 		color: #cdcdcd;

@@ -1,6 +1,4 @@
-import { useEffect } from "react"
 import styled from "styled-components"
-import { tsParticles } from "tsparticles"
 
 import Navigation from "./components/Navigation"
 
@@ -10,6 +8,7 @@ const Section = styled.section`
 	width: 100%;
 	height: 100vh;
 	display: flex;
+	background-color: black;
 `
 
 const Particles = styled.div`
@@ -18,8 +17,8 @@ const Particles = styled.div`
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: -1;
-	background-color: black;
+	background-image: url("/hero-background.svg");
+	background-size: cover;
 `
 
 const ContentWrapper = styled.div`
@@ -69,56 +68,8 @@ const Picture = styled.div`
 `
 
 const HeroSection = () => {
-	useEffect(() => {
-		tsParticles.load("hero-particles", {
-			particles: {
-				number: {
-					value: 25,
-					density: {
-						enable: true,
-						value_area: 1000
-					}
-				},
-				color: {
-					value: "#ffffff"
-				},
-				size: {
-					value: 0,
-					anim: {
-						enable: false,
-						speed: 40,
-						size_min: 0.1,
-						sync: false
-					}
-				},
-				line_linked: {
-					enable: true,
-					distance: 150,
-					color: "#ffffff",
-					opacity: 0.4,
-					width: 1
-				},
-				move: {
-					enable: true,
-					speed: 2,
-					direction: "none",
-					random: false,
-					straight: false,
-					out_mode: "out",
-					bounce: false,
-					attract: {
-						enable: false,
-						rotateX: 600,
-						rotateY: 1200
-					}
-				}
-			},
-			retina_detect: true
-		})
-	}, [])
-
 	return <Section>
-		<Particles id="hero-particles" />
+		<Particles />
 		<Navigation />
 		<ContentWrapper>
 			<Content>
