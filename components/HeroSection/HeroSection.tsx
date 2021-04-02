@@ -19,6 +19,7 @@ const Particles = styled.div`
 	right: 0;
 	background-image: url("/hero-background.svg");
 	background-size: cover;
+	pointer-events: none;
 `
 
 const ContentWrapper = styled.div`
