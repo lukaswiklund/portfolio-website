@@ -7,19 +7,19 @@ const workItems = [
 		name: "Cosuno",
 		logo: "cosuno.svg",
 		link: "https://www.cosuno.de/",
-		description: "Developing a web app to digitize the construction industry.",
+		description: "Developed a web app to digitize the construction industry.",
 	},
 	{
 		name: "Forento",
 		logo: "forento.svg",
 		link: "https://www.forento.io/",
-		description: "Developing a web platform to let users create their very own online course platform.",
+		description: "Developed a web platform that lets users create their very own online course platform.",
 	},
 	{
 		name: "Inet",
 		logo: "inet.svg",
 		link: "https://www.inet.se/",
-		description: "Developing a web shop for Sweden's most loved computer store brand.",
+		description: "Developed a web shop for Sweden's most loved computer store brand.",
 	},
 ]
 
