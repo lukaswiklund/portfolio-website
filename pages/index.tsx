@@ -4,6 +4,7 @@ import Head from "next/head"
 import HeroSection from "components/HeroSection/HeroSection"
 import ExperienceSection from "components/HeroSection/ExperienceSection"
 import SkillsSection from "components/HeroSection/SkillsSection"
+import ContactSection from "components/HeroSection/ContactSection"
 
 
 const HomePage: NextPage = () =>
@@ -18,6 +19,7 @@ const HomePage: NextPage = () =>
 		<HeroSection />
 		<ExperienceSection />
 		<SkillsSection />
+		<ContactSection />
 	</>
 
 export default HomePage
