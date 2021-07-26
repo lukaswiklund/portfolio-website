@@ -1,11 +1,15 @@
 import { NextPage } from "next"
 import Head from "next/head"
+import styled from "styled-components"
 
 import HeroSection from "components/HeroSection/HeroSection"
+import ExperienceSection from "components/HeroSection/ExperienceSection"
+import SkillsSection from "components/HeroSection/SkillsSection"
+import ContactSection from "components/HeroSection/ContactSection"
 
 
 const HomePage: NextPage = () =>
-	<>
+	<Container>
 		<Head>
 			<title>Lukas Wiklund</title>
 			<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -14,6 +18,13 @@ const HomePage: NextPage = () =>
 		</Head>
 
 		<HeroSection />
-	</>
+		<ExperienceSection />
+		<SkillsSection />
+		<ContactSection />
+	</Container>
+
+const Container = styled.div`
+	padding-bottom: 300px;
+`
 
 export default HomePage
