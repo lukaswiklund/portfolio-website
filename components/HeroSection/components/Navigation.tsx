@@ -2,10 +2,6 @@ import styled from "styled-components"
 
 
 const Container = styled.nav`
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -14,6 +10,7 @@ const Container = styled.nav`
 
 const Button = styled.a`
 	color: white;
+	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 	text-decoration: none;
 	transition: .2s color;

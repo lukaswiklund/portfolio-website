@@ -2,6 +2,7 @@ import { NextPage } from "next"
 import Head from "next/head"
 
 import HeroSection from "components/HeroSection/HeroSection"
+import SellingPointsSection from "components/HeroSection/SellingPointsSection"
 
 
 const HomePage: NextPage = () =>
@@ -14,6 +15,7 @@ const HomePage: NextPage = () =>
 		</Head>
 
 		<HeroSection />
+		<SellingPointsSection />
 	</>
 
 export default HomePage
