@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const skills = [
 	{
-		name: "lukas-wiklund",
+		name: "Lukas Wiklund",
 		logo: "linkedin.svg",
 		link: "https://www.linkedin.com/in/lukas-wiklund/",
 	},
@@ -12,6 +12,11 @@ const skills = [
 		name: "Hadermite",
 		logo: "github.svg",
 		link: "https://github.com/Hadermite/",
+	},
+	{
+		name: "Lukas Wiklund",
+		logo: "facebook.svg",
+		link: "https://www.facebook.com/LukasEGWiklund/",
 	},
 	{
 		name: "lukas@wiklund.se",
@@ -26,7 +31,7 @@ const ContactSection: NextPage = () =>
 		<Skills>
 			{skills.map(({ name, logo, link }, index) =>
 				<Skill key={index}>
-					<SkillLink href={link}>
+					<SkillLink href={link} target="_blank" rel="noopener noreferrer">
 						<SkillImage alt={`${name} logo`} src={`/logos/${logo}`} />
 						<SkillName>{name}</SkillName>
 					</SkillLink>

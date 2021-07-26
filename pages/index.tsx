@@ -5,10 +5,11 @@ import HeroSection from "components/HeroSection/HeroSection"
 import ExperienceSection from "components/HeroSection/ExperienceSection"
 import SkillsSection from "components/HeroSection/SkillsSection"
 import ContactSection from "components/HeroSection/ContactSection"
+import styled from "styled-components"
 
 
 const HomePage: NextPage = () =>
-	<>
+	<Container>
 		<Head>
 			<title>Lukas Wiklund</title>
 			<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,6 +21,10 @@ const HomePage: NextPage = () =>
 		<ExperienceSection />
 		<SkillsSection />
 		<ContactSection />
-	</>
+	</Container>
+
+const Container = styled.div`
+	padding-bottom: 300px;
+`
 
 export default HomePage
