@@ -11,7 +11,7 @@ const skills = [
 	{
 		name: "Hadermite",
 		logo: "github.svg",
-		link: "mailto:lukas@wiklund.se",
+		link: "https://github.com/Hadermite/",
 	},
 	{
 		name: "lukas@wiklund.se",
