@@ -13,7 +13,7 @@ const HeroSection = () => (
 						Hi, I'm
 						<Title>Lukas Wiklund</Title>
 					</TitleContainer>
-					<Subtitle>A Software Developer based in Gothenburg, Sweden.</Subtitle>
+					<Subtitle>A Software Engineer based in Gothenburg, Sweden.</Subtitle>
 				</Content>
 			</ContentWrapper>
 		</Container>
