@@ -1,7 +1,6 @@
 import { AppProps } from "next/app"
 import { createGlobalStyle } from "styled-components"
 
-
 const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
@@ -11,10 +10,11 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
-const App = ({ Component, pageProps }: AppProps) =>
-    <>
-        <GlobalStyle />
-        <Component {...pageProps} />
-    </>
+const App = ({ Component, pageProps }: AppProps) => (
+	<>
+		<GlobalStyle />
+		<Component {...pageProps} />
+	</>
+)
 
 export default App

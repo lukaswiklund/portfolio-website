@@ -1,7 +1,6 @@
 import { NextPage } from "next"
 import styled from "styled-components"
 
-
 const skills = [
 	{
 		name: "React",
@@ -21,18 +20,19 @@ const skills = [
 	},
 ]
 
-const SellingPointsSection: NextPage = () =>
+const SellingPointsSection: NextPage = () => (
 	<Container>
 		<Title>What I'm using</Title>
 		<Skills>
-			{skills.map(({name, logo}, index) =>
+			{skills.map(({ name, logo }, index) => (
 				<Skill key={index}>
 					<SkillImage alt={`${name} logo`} src={`/logos/${logo}`} />
 					<SkillName>{name}</SkillName>
 				</Skill>
-			)}
+			))}
 		</Skills>
 	</Container>
+)
 
 const Container = styled.section`
 	padding: 50px;

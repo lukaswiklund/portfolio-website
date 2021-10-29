@@ -1,7 +1,6 @@
 import { NextPage } from "next"
 import styled from "styled-components"
 
-
 const workItems = [
 	{
 		name: "Cosuno",
@@ -23,11 +22,11 @@ const workItems = [
 	},
 ]
 
-const ExperienceSection: NextPage = () =>
+const ExperienceSection: NextPage = () => (
 	<Container>
 		<Title>What I've done</Title>
 		<WorkItems>
-			{workItems.map(({ name, logo, link, description }, index) =>
+			{workItems.map(({ name, logo, link, description }, index) => (
 				<WorkItem key={index}>
 					<a href={link} target="_blank" rel="noopener noreferrer">
 						<WorkItemImage style={{ backgroundImage: `url("/logos/${logo}")` }} />
@@ -35,9 +34,10 @@ const ExperienceSection: NextPage = () =>
 					<WorkItemTitle>{name}</WorkItemTitle>
 					<WorkItemDescription>{description}</WorkItemDescription>
 				</WorkItem>
-			)}
+			))}
 		</WorkItems>
 	</Container>
+)
 
 const Container = styled.section`
 	padding: 50px;
@@ -76,7 +76,7 @@ const WorkItemTitle = styled.h3`
 `
 
 const WorkItemDescription = styled.p`
-	color: #8B8B8B;
+	color: #8b8b8b;
 `
 
 export default ExperienceSection

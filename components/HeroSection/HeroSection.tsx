@@ -2,8 +2,7 @@ import styled from "styled-components"
 
 import Navigation from "./components/Navigation"
 
-
-const HeroSection = () =>
+const HeroSection = () => (
 	<Section>
 		<Navigation />
 		<Container>
@@ -19,11 +18,12 @@ const HeroSection = () =>
 			</ContentWrapper>
 		</Container>
 	</Section>
+)
 
 const Section = styled.section`
 	position: relative;
 	width: 100%;
-	background-color: #1B1B1B;
+	background-color: #1b1b1b;
 `
 
 const Container = styled.div`

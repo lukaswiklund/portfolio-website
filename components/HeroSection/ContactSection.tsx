@@ -1,7 +1,6 @@
 import { NextPage } from "next"
 import styled from "styled-components"
 
-
 const skills = [
 	{
 		name: "Lukas Wiklund",
@@ -25,20 +24,21 @@ const skills = [
 	},
 ]
 
-const ContactSection: NextPage = () =>
+const ContactSection: NextPage = () => (
 	<Container>
 		<Title>Get in touch</Title>
 		<Skills>
-			{skills.map(({ name, logo, link }, index) =>
+			{skills.map(({ name, logo, link }, index) => (
 				<Skill key={index}>
 					<SkillLink href={link} target="_blank" rel="noopener noreferrer">
 						<SkillImage alt={`${name} logo`} src={`/logos/${logo}`} />
 						<SkillName>{name}</SkillName>
 					</SkillLink>
 				</Skill>
-			)}
+			))}
 		</Skills>
 	</Container>
+)
 
 const Container = styled.section`
 	padding: 50px;
