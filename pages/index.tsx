@@ -18,7 +18,6 @@ const HomePage: NextPage = () => (
 	>
 		<Container>
 			<Head>
-				<title></title>
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
 					rel="stylesheet"
