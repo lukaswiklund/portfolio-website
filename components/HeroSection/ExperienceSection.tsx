@@ -3,22 +3,24 @@ import styled from "styled-components"
 
 const workItems = [
 	{
-		name: "Cosuno",
-		logo: "cosuno.svg",
-		link: "https://www.cosuno.de/",
-		description: "Developed a web app to digitize the construction industry.",
-	},
-	{
 		name: "Forento",
 		logo: "forento.svg",
 		link: "https://www.forento.io/",
-		description: "Developed a web platform that lets users create their very own online course platform.",
+		description:
+			"SaaS platform that lets users create their very own custom branded online course & digital content monetization platform.",
+	},
+	{
+		name: "Cosuno",
+		logo: "cosuno.svg",
+		link: "https://www.cosuno.de/",
+		description:
+			"SaaS platform to manage the entire planning cycle and benefit from a one-size-fits-all solution for all planning needs for the construction industry.",
 	},
 	{
 		name: "Inet",
 		logo: "inet.svg",
 		link: "https://www.inet.se/",
-		description: "Developed a web shop for Sweden's most loved computer store brand.",
+		description: "Web shop and retail system for Sweden's most loved computer store brand.",
 	},
 ]
 
@@ -77,6 +79,7 @@ const WorkItemTitle = styled.h3`
 
 const WorkItemDescription = styled.p`
 	color: #8b8b8b;
+	line-height: 1.4;
 `
 
 export default ExperienceSection
