@@ -36,7 +36,7 @@ const Picture = styled.div`
 	background-image: url("/lukas.png");
 	background-repeat: no-repeat;
 	background-position: 0 100%;
-	background-size: 100%;
+	background-size: contain;
 `
 
 const ContentWrapper = styled.div`
