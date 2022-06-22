@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import Image from "next/image"
 
 import Navigation from "./Navigation"
 
@@ -8,7 +9,9 @@ const HeroSection: React.FC = () => (
 	<Section>
 		<Navigation />
 		<Container>
-			<Picture alt="Picture" src={picture.src} />
+			<PictureContainer>
+				<Image alt="Picture" src={picture} layout="fill" objectFit="contain" objectPosition="bottom left" />
+			</PictureContainer>
 			<ContentWrapper>
 				<Content>
 					<TitleContainer>
@@ -32,16 +35,13 @@ const Container = styled.div`
 	height: 70vh;
 `
 
-const Picture = styled.img`
-	width: 30%;
-	flex: 0 0 auto;
-	object-fit: contain;
-	object-position: bottom left;
+const PictureContainer = styled.div`
+	flex: 0 0 30%;
+	position: relative;
 `
 
 const ContentWrapper = styled.div`
-	width: 70%;
-	flex: 0 0 auto;
+	flex: 0 0 70%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
