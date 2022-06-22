@@ -20,7 +20,7 @@ const Button = styled.a`
 	}
 `
 
-const Navigation = () => (
+const Navigation: React.FC = () => (
 	<Container>
 		<Button target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lukas-wiklund/">
 			LinkedIn

@@ -1,4 +1,3 @@
-import { NextPage } from "next"
 import styled from "@emotion/styled"
 
 const workItems = [
@@ -24,7 +23,7 @@ const workItems = [
 	},
 ]
 
-const ExperienceSection: NextPage = () => (
+const ExperienceSection: React.FC = () => (
 	<Container>
 		<Title>What I've done</Title>
 		<WorkItems>

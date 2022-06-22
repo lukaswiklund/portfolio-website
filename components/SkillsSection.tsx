@@ -1,4 +1,3 @@
-import { NextPage } from "next"
 import styled from "@emotion/styled"
 
 const skills = [
@@ -20,7 +19,7 @@ const skills = [
 	},
 ]
 
-const SellingPointsSection: NextPage = () => (
+const SellingPointsSection: React.FC = () => (
 	<Container>
 		<Title>What I'm using</Title>
 		<Skills>

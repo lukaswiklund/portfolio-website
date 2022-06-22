@@ -2,10 +2,10 @@ import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 import styled from "@emotion/styled"
 
-import HeroSection from "components/HeroSection/HeroSection"
-import ExperienceSection from "components/HeroSection/ExperienceSection"
-import SkillsSection from "components/HeroSection/SkillsSection"
-import ContactSection from "components/HeroSection/ContactSection"
+import HeroSection from "components/HeroSection"
+import ExperienceSection from "components/ExperienceSection"
+import SkillsSection from "components/SkillsSection"
+import ContactSection from "components/ContactSection"
 
 const HomePage: NextPage = () => (
 	<Container>

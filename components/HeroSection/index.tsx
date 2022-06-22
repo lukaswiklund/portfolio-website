@@ -1,12 +1,14 @@
 import styled from "@emotion/styled"
 
-import Navigation from "./components/Navigation"
+import Navigation from "./Navigation"
 
-const HeroSection = () => (
+import picture from "./picture.png"
+
+const HeroSection: React.FC = () => (
 	<Section>
 		<Navigation />
 		<Container>
-			<Picture />
+			<Picture alt="Picture" src={picture.src} />
 			<ContentWrapper>
 				<Content>
 					<TitleContainer>
@@ -22,7 +24,6 @@ const HeroSection = () => (
 
 const Section = styled.section`
 	position: relative;
-	width: 100%;
 	background-color: #1b1b1b;
 `
 
@@ -31,16 +32,16 @@ const Container = styled.div`
 	height: 70vh;
 `
 
-const Picture = styled.div`
-	flex-basis: 30%;
-	background-image: url("/lukas.png");
-	background-repeat: no-repeat;
-	background-position: 0 100%;
-	background-size: contain;
+const Picture = styled.img`
+	width: 30%;
+	flex: 0 0 auto;
+	object-fit: contain;
+	object-position: bottom left;
 `
 
 const ContentWrapper = styled.div`
-	flex-basis: 70%;
+	width: 70%;
+	flex: 0 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
