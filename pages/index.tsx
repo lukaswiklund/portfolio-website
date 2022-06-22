@@ -1,6 +1,6 @@
 import { NextPage } from "next"
-import styled from "styled-components"
 import { NextSeo } from "next-seo"
+import styled from "@emotion/styled"
 
 import HeroSection from "components/HeroSection/HeroSection"
 import ExperienceSection from "components/HeroSection/ExperienceSection"

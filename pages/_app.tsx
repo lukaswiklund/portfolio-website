@@ -1,18 +1,22 @@
 import { AppProps } from "next/app"
-import { createGlobalStyle } from "styled-components"
+import { css, Global } from "@emotion/react"
 
-const GlobalStyle = createGlobalStyle`
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Overpass", sans-serif;
-    }
-`
+const globalStyles = (
+	<Global
+		styles={css`
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Overpass", sans-serif;
+			}
+		`}
+	/>
+)
 
 const App = ({ Component, pageProps }: AppProps) => (
 	<>
-		<GlobalStyle />
+		{globalStyles}
 		<Component {...pageProps} />
 	</>
 )

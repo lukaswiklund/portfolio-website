@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const skills = [
 	{

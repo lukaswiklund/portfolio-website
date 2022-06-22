@@ -1,7 +1,7 @@
 import React from "react"
 import { Head, Html, Main, NextScript } from "next/document"
 
-const AppDocument: React.FC = () => (
+const Document: React.FC = () => (
 	<Html>
 		<Head>
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,4 +29,4 @@ const AppDocument: React.FC = () => (
 	</Html>
 )
 
-export default AppDocument
+export default Document
