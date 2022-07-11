@@ -12,6 +12,7 @@ const HomePage: NextPage = () => (
 		<NextSeo
 			title="Lukas Wiklund"
 			description="Hi, I'm Lukas Wiklund. A Software Engineer based in Gothenburg, Sweden."
+			canonical="https://hadermite.se"
 			openGraph={{
 				images: [{ url: "/lukas.png", width: 1536, height: 2048 }],
 			}}
