@@ -17,9 +17,9 @@ const skills = [
 		link: "https://www.facebook.com/LukasEGWiklund/",
 	},
 	{
-		name: "lukas@wiklund.se",
+		name: "hej@lukaswiklund.se",
 		logo: "mail.svg",
-		link: "mailto:lukas@wiklund.se",
+		link: "mailto:hej@lukaswiklund.se",
 	},
 ]
 
