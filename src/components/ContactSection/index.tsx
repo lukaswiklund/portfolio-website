@@ -1,24 +1,30 @@
 import styled from "@emotion/styled"
+import Image from "next/image"
+
+import facebookLogo from "./logos/facebook.svg"
+import githubLogo from "./logos/github.svg"
+import linkedInLogo from "./logos/linkedin.svg"
+import mailLogo from "./logos/mail.svg"
 
 const skills = [
 	{
 		name: "Lukas Wiklund",
-		logo: "linkedin.svg",
+		logo: linkedInLogo,
 		link: "https://www.linkedin.com/in/lukas-wiklund/",
 	},
 	{
 		name: "Hadermite",
-		logo: "github.svg",
+		logo: githubLogo,
 		link: "https://github.com/Hadermite/",
 	},
 	{
 		name: "Lukas Wiklund",
-		logo: "facebook.svg",
+		logo: facebookLogo,
 		link: "https://www.facebook.com/LukasEGWiklund/",
 	},
 	{
 		name: "hej@lukaswiklund.se",
-		logo: "mail.svg",
+		logo: mailLogo,
 		link: "mailto:hej@lukaswiklund.se",
 	},
 ]
@@ -30,7 +36,7 @@ const ContactSection: React.FC = () => (
 			{skills.map(({ name, logo, link }, index) => (
 				<Skill key={index}>
 					<SkillLink href={link} target="_blank" rel="noopener noreferrer">
-						<SkillImage alt={`${name} logo`} src={`/logos/${logo}`} />
+						<SkillImage alt={`${name} logo`} src={logo} width={40} />
 						<SkillName>{name}</SkillName>
 					</SkillLink>
 				</Skill>
@@ -67,8 +73,7 @@ const SkillLink = styled.a`
 	text-decoration: none;
 `
 
-const SkillImage = styled.img`
-	height: 40px;
+const SkillImage = styled(Image)`
 	margin-right: 15px;
 `
 

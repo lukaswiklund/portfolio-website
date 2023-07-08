@@ -1,22 +1,16 @@
 import styled from "@emotion/styled"
+import Image from "next/image"
+
+import nodejsLogo from "./logos/nodejs.svg"
+import reactLogo from "./logos/react.svg"
+import sqlLogo from "./logos/sql.svg"
+import typescriptLogo from "./logos/typescript.svg"
 
 const skills = [
-	{
-		name: "React",
-		logo: "react.svg",
-	},
-	{
-		name: "NodeJS",
-		logo: "nodejs.svg",
-	},
-	{
-		name: "TypeScript",
-		logo: "typescript.svg",
-	},
-	{
-		name: "SQL",
-		logo: "sql.svg",
-	},
+	{ name: "React", logo: reactLogo },
+	{ name: "NodeJS", logo: nodejsLogo },
+	{ name: "TypeScript", logo: typescriptLogo },
+	{ name: "SQL", logo: sqlLogo },
 ]
 
 const SellingPointsSection: React.FC = () => (
@@ -25,7 +19,7 @@ const SellingPointsSection: React.FC = () => (
 		<Skills>
 			{skills.map(({ name, logo }, index) => (
 				<Skill key={index}>
-					<SkillImage alt={`${name} logo`} src={`/logos/${logo}`} />
+					<SkillImage alt={`${name} logo`} src={logo} height={40} />
 					<SkillName>{name}</SkillName>
 				</Skill>
 			))}
@@ -56,8 +50,7 @@ const Skill = styled.li`
 	margin: 0 30px;
 `
 
-const SkillImage = styled.img`
-	height: 40px;
+const SkillImage = styled(Image)`
 	margin-right: 15px;
 `
 

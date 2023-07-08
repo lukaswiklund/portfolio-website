@@ -1,11 +1,11 @@
+import styled from "@emotion/styled"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
-import styled from "@emotion/styled"
 
-import HeroSection from "components/HeroSection"
-import ExperienceSection from "components/ExperienceSection"
-import SkillsSection from "components/SkillsSection"
-import ContactSection from "components/ContactSection"
+import ContactSection from "~/components/ContactSection"
+import ExperienceSection from "~/components/ExperienceSection"
+import HeroSection from "~/components/HeroSection"
+import SkillsSection from "~/components/SkillsSection"
 
 const HomePage: NextPage = () => (
 	<Container>

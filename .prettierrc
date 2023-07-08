@@ -3,5 +3,7 @@
 	"tabWidth": 4,
 	"semi": false,
 	"printWidth": 120,
-	"arrowParens": "avoid"
+	"arrowParens": "avoid",
+	"importOrder": ["^~/.+$", "^\\.*/.+$"],
+	"importOrderSeparation": true
 }
