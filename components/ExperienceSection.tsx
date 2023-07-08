@@ -4,14 +4,14 @@ const workItems = [
 	{
 		name: "Forento",
 		logo: "forento.svg",
-		link: "https://www.forento.io/",
+		link: "https://forento.io",
 		description:
 			"SaaS platform that lets users create their very own custom branded online course & digital content monetization platform.",
 	},
 	{
 		name: "Cosuno",
 		logo: "cosuno.svg",
-		link: "https://www.cosuno.de/",
+		link: "https://www.cosuno.com",
 		description:
 			"SaaS platform to manage the entire planning cycle and benefit from a one-size-fits-all solution for all planning needs for the construction industry.",
 	},
