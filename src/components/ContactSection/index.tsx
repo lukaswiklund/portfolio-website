@@ -13,9 +13,9 @@ const skills = [
 		link: "https://www.linkedin.com/in/lukas-wiklund/",
 	},
 	{
-		name: "Hadermite",
+		name: "lukaswiklund",
 		logo: githubLogo,
-		link: "https://github.com/Hadermite/",
+		link: "https://github.com/lukaswiklund/",
 	},
 	{
 		name: "Lukas Wiklund",
