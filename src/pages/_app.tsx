@@ -1,5 +1,5 @@
-import { AppProps } from "next/app"
 import { css, Global } from "@emotion/react"
+import { AppProps } from "next/app"
 
 const globalStyles = (
 	<Global
