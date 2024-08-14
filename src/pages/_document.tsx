@@ -9,18 +9,6 @@ const Document: React.FC = () => (
 
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans" />
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;900" />
-
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TY0TVR0J8"></script>
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', 'G-5TY0TVR0J8');
-					`,
-				}}
-			/>
 		</Head>
 		<body>
 			<Main />
