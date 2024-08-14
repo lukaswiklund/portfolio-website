@@ -1,4 +1,5 @@
 import { css, Global } from "@emotion/react"
+import { Analytics } from "@vercel/analytics/react"
 import { AppProps } from "next/app"
 
 const globalStyles = (
@@ -17,6 +18,7 @@ const globalStyles = (
 const App = ({ Component, pageProps }: AppProps) => (
 	<>
 		{globalStyles}
+		<Analytics />
 		<Component {...pageProps} />
 	</>
 )
