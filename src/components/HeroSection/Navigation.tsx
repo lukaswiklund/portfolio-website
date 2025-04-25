@@ -1,37 +1,22 @@
-import styled from "@emotion/styled"
+import { FC } from "react"
 
-const Container = styled.nav`
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	padding: 42px 0;
-`
+const Navigation: FC = () => (
+	<div className="flex items-start justify-center py-11">
+		<Button label="LinkedIn" href="https://www.linkedin.com/in/lukas-wiklund/" />
+		<Button label="GitHub" href="https://github.com/Hadermite" />
+		<Button label="Facebook" href="https://www.facebook.com/LukasEGWiklund/" />
+	</div>
+)
 
-const Button = styled.a`
-	color: white;
-	font-family: "Open Sans", sans-serif;
-	font-size: 16px;
-	text-decoration: none;
-	transition: 0.2s color;
-	padding: 26px;
-
-	&:hover {
-		color: #cdcdcd;
-	}
-`
-
-const Navigation: React.FC = () => (
-	<Container>
-		<Button target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lukas-wiklund/">
-			LinkedIn
-		</Button>
-		<Button target="_blank" rel="noopener noreferrer" href="https://github.com/Hadermite">
-			GitHub
-		</Button>
-		<Button target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LukasEGWiklund/">
-			Facebook
-		</Button>
-	</Container>
+const Button: FC<{ label: string; href: string }> = ({ label, href }) => (
+	<a
+		className="p-6 font-opensans text-white duration-200 hover:text-hover"
+		target="_blank"
+		rel="noopener noreferrer"
+		href={href}
+	>
+		{label}
+	</a>
 )
 
 export default Navigation

@@ -1,78 +1,32 @@
-import styled from "@emotion/styled"
+import Image from "next/image"
+import { FC } from "react"
 
 import Navigation from "./Navigation"
 import picture from "./picture.png"
 
-const HeroSection: React.FC = () => (
-	<Section>
+const HeroSection: FC = () => (
+	<section className="relative bg-black">
 		<Navigation />
-		<Container>
-			<Picture alt="Picture" src={picture.src} />
-			<ContentWrapper>
-				<Content>
-					<TitleContainer>
+		<div className="flex h-[70vh]">
+			<Image
+				alt="Picture of Lukas"
+				src={picture}
+				width={0}
+				height={0}
+				sizes="30vw"
+				className="w-[30%] shrink-0 grow-0 basis-auto object-contain object-bottom-left"
+			/>
+			<div className="flex w-[70%] shrink-0 grow-0 basis-auto flex-col justify-center">
+				<div className="flex flex-col justify-center">
+					<div className="mb-8 text-9xl font-black text-white">
 						Hi, I'm
-						<Title>Lukas Wiklund</Title>
-					</TitleContainer>
-					<Subtitle>A Software Engineer based in Gothenburg, Sweden.</Subtitle>
-				</Content>
-			</ContentWrapper>
-		</Container>
-	</Section>
+						<h1 className="ml-12">Lukas Wiklund</h1>
+					</div>
+					<p className="text-3xl text-white">A Software Engineer based in Gothenburg, Sweden.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 )
-
-const Section = styled.section`
-	position: relative;
-	background-color: #1b1b1b;
-`
-
-const Container = styled.div`
-	display: flex;
-	height: 70vh;
-`
-
-const Picture = styled.img`
-	width: 30%;
-	flex: 0 0 auto;
-	object-fit: contain;
-	object-position: bottom left;
-`
-
-const ContentWrapper = styled.div`
-	width: 70%;
-	flex: 0 0 auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-`
-
-const Content = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-`
-
-const TitleContainer = styled.div`
-	color: white;
-	font-size: 6.7vw;
-	font-weight: 900;
-	line-height: 1;
-	margin-bottom: 2vw;
-`
-
-const Title = styled.h1`
-	font-size: 6.7vw;
-	font-weight: 900;
-	line-height: 1;
-	display: block;
-	margin-left: 2vw;
-`
-
-const Subtitle = styled.p`
-	color: white;
-	font-size: 1.6vw;
-	align-self: flex-start;
-	margin-bottom: 1.6vw;
-`
 
 export default HeroSection

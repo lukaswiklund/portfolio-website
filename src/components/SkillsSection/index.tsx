@@ -1,5 +1,5 @@
-import styled from "@emotion/styled"
 import Image from "next/image"
+import { FC } from "react"
 
 import nodejsLogo from "./logos/nodejs.svg"
 import reactLogo from "./logos/react.svg"
@@ -13,49 +13,18 @@ const skills = [
 	{ name: "SQL", logo: sqlLogo },
 ]
 
-const SellingPointsSection: React.FC = () => (
-	<Container>
-		<Title>What I'm using</Title>
-		<Skills>
+const SellingPointsSection: FC = () => (
+	<div className="flex flex-col items-center p-12">
+		<h2 className="mb-12 text-4xl font-bold">What I'm using</h2>
+		<ul className="flex">
 			{skills.map(({ name, logo }, index) => (
-				<Skill key={index}>
-					<SkillImage alt={`${name} logo`} src={logo} height={40} />
-					<SkillName>{name}</SkillName>
-				</Skill>
+				<li key={index} className="mx-8 flex items-center text-dark">
+					<Image alt={`${name} logo`} src={logo} height={40} className="mr-4" />
+					<p className="text-xl">{name}</p>
+				</li>
 			))}
-		</Skills>
-	</Container>
+		</ul>
+	</div>
 )
-
-const Container = styled.section`
-	padding: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-`
-
-const Title = styled.h2`
-	font-size: 40px;
-	margin-bottom: 50px;
-`
-
-const Skills = styled.ul`
-	list-style: none;
-	display: flex;
-`
-
-const Skill = styled.li`
-	display: flex;
-	align-items: center;
-	margin: 0 30px;
-`
-
-const SkillImage = styled(Image)`
-	margin-right: 15px;
-`
-
-const SkillName = styled.p`
-	font-size: 20px;
-`
 
 export default SellingPointsSection

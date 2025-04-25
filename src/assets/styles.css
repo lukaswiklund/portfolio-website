@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body {
+	font-family: "Overpass", sans-serif;
+}
+
+@theme {
+	--color-black: #1b1b1b;
+	--color-dark: #212121;
+	--color-light: #8b8b8b;
+	--color-hover: #cdcdcd;
+	--font-opensans: "Open Sans", sans-serif;
+}

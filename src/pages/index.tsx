@@ -1,4 +1,3 @@
-import styled from "@emotion/styled"
 import { NextPage } from "next"
 import { NextSeo } from "next-seo"
 
@@ -8,7 +7,7 @@ import HeroSection from "~/components/HeroSection"
 import SkillsSection from "~/components/SkillsSection"
 
 const HomePage: NextPage = () => (
-	<Container>
+	<div className="pb-16">
 		<NextSeo
 			title="Lukas Wiklund"
 			description="Hi, I'm Lukas Wiklund. A Software Engineer based in Gothenburg, Sweden."
@@ -22,11 +21,7 @@ const HomePage: NextPage = () => (
 		<ExperienceSection />
 		<SkillsSection />
 		<ContactSection />
-	</Container>
+	</div>
 )
-
-const Container = styled.div`
-	padding-bottom: 300px;
-`
 
 export default HomePage

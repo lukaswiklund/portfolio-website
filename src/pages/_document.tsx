@@ -1,7 +1,7 @@
 import { Head, Html, Main, NextScript } from "next/document"
-import React from "react"
+import { FC } from "react"
 
-const Document: React.FC = () => (
+const Document: FC = () => (
 	<Html>
 		<Head>
 			<link rel="preconnect" href="https://fonts.googleapis.com" />

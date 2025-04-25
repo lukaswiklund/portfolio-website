@@ -1,6 +1,6 @@
-import styled from "@emotion/styled"
 import Image from "next/image"
 import Link from "next/link"
+import { FC } from "react"
 
 import cosunoLogo from "./logos/cosuno.svg"
 import forentoLogo from "./logos/forento.svg"
@@ -29,66 +29,28 @@ const workItems = [
 	},
 ]
 
-const ExperienceSection: React.FC = () => (
-	<Container>
-		<Title>What I've done</Title>
-		<WorkItems>
+const ExperienceSection: FC = () => (
+	<div className="flex flex-col items-center p-12">
+		<h2 className="mb-12 text-4xl font-bold">What I've done</h2>
+		<ul className="flex gap-8">
 			{workItems.map(({ name, logo, link, description }, index) => (
-				<WorkItem key={index}>
-					<WorkItemImageLink href={link} target="_blank" rel="noopener noreferrer">
+				<li key={index} className="flex w-[320px] flex-col">
+					<Link href={link} target="_blank" rel="noopener noreferrer" className="mb-6 self-center">
 						<Image
+							className="h-[70px] w-[240px]"
 							alt={`${name}'s logo`}
 							src={logo}
 							width={240}
 							height={70}
 							style={{ objectFit: "contain" }}
 						/>
-					</WorkItemImageLink>
-					<WorkItemTitle>{name}</WorkItemTitle>
-					<WorkItemDescription>{description}</WorkItemDescription>
-				</WorkItem>
+					</Link>
+					<h3 className="mb-2 font-bold text-dark">{name}</h3>
+					<p className="text-light">{description}</p>
+				</li>
 			))}
-		</WorkItems>
-	</Container>
+		</ul>
+	</div>
 )
-
-const Container = styled.section`
-	padding: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-`
-
-const Title = styled.h2`
-	font-size: 40px;
-	margin-bottom: 50px;
-`
-
-const WorkItems = styled.div`
-	list-style: none;
-	display: flex;
-`
-
-const WorkItem = styled.div`
-	width: 300px;
-	margin: 0 30px;
-	display: flex;
-	flex-direction: column;
-`
-
-const WorkItemImageLink = styled(Link)`
-	margin-bottom: 20px;
-	align-self: center;
-`
-
-const WorkItemTitle = styled.h3`
-	color: #212121;
-	margin-bottom: 5px;
-`
-
-const WorkItemDescription = styled.p`
-	color: #8b8b8b;
-	line-height: 1.4;
-`
 
 export default ExperienceSection

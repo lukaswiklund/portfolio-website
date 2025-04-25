@@ -1,5 +1,6 @@
 {
 	"name": "portfolio-website",
+	"type": "module",
 	"author": "Lukas Wiklund",
 	"license": "MIT",
 	"scripts": {
@@ -13,21 +14,24 @@
 		"*": "prettier --write --ignore-unknown"
 	},
 	"dependencies": {
-		"@emotion/react": "^11.14.0",
-		"@emotion/styled": "^11.14.0",
+		"@tailwindcss/postcss": "^4.1.4",
 		"@vercel/analytics": "^1.5.0",
 		"next": "^15.3.1",
 		"next-seo": "^6.6.0",
+		"postcss": "^8.5.3",
 		"react": "^19.1.0",
-		"react-dom": "^19.1.0"
+		"react-dom": "^19.1.0",
+		"tailwindcss": "^4.1.4"
 	},
 	"devDependencies": {
+		"@next/bundle-analyzer": "^15.3.1",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.2",
 		"@types/node": "^22.15.2",
 		"@types/react": "^19.1.2",
 		"husky": "^9.1.7",
 		"lint-staged": "^15.5.1",
 		"prettier": "^3.5.3",
+		"prettier-plugin-tailwindcss": "^0.6.11",
 		"typescript": "^5.8.3"
 	}
 }

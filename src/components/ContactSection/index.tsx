@@ -1,5 +1,5 @@
-import styled from "@emotion/styled"
 import Image from "next/image"
+import { FC } from "react"
 
 import facebookLogo from "./logos/facebook.svg"
 import githubLogo from "./logos/github.svg"
@@ -29,56 +29,20 @@ const skills = [
 	},
 ]
 
-const ContactSection: React.FC = () => (
-	<Container>
-		<Title>Get in touch</Title>
-		<Skills>
+const ContactSection: FC = () => (
+	<div className="flex flex-col items-center p-12">
+		<h2 className="mb-12 text-4xl font-bold">Get in touch</h2>
+		<ul className="flex">
 			{skills.map(({ name, logo, link }, index) => (
-				<Skill key={index}>
-					<SkillLink href={link} target="_blank" rel="noopener noreferrer">
-						<SkillImage alt={`${name} logo`} src={logo} width={40} />
-						<SkillName>{name}</SkillName>
-					</SkillLink>
-				</Skill>
+				<li key={index} className="mx-8">
+					<a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center text-dark">
+						<Image alt={`${name} logo`} src={logo} width={40} className="mr-4" />
+						<p className="text-xl">{name}</p>
+					</a>
+				</li>
 			))}
-		</Skills>
-	</Container>
+		</ul>
+	</div>
 )
-
-const Container = styled.section`
-	padding: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-`
-
-const Title = styled.h2`
-	font-size: 40px;
-	margin-bottom: 50px;
-`
-
-const Skills = styled.ul`
-	list-style: none;
-	display: flex;
-`
-
-const Skill = styled.li`
-	margin: 0 30px;
-`
-
-const SkillLink = styled.a`
-	color: #212121;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-`
-
-const SkillImage = styled(Image)`
-	margin-right: 15px;
-`
-
-const SkillName = styled.p`
-	font-size: 20px;
-`
 
 export default ContactSection
