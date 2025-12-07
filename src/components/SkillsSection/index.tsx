@@ -13,7 +13,7 @@ const skills = [
 	{ name: "SQL", logo: sqlLogo },
 ]
 
-const SellingPointsSection: FC = () => (
+const SkillsSection: FC = () => (
 	<div className="flex flex-col items-center p-12">
 		<h2 className="mb-12 text-4xl font-bold">What I'm using</h2>
 		<ul className="flex">
@@ -27,4 +27,4 @@ const SellingPointsSection: FC = () => (
 	</div>
 )
 
-export default SellingPointsSection
+export default SkillsSection
