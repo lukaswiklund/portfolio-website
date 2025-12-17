@@ -23,11 +23,15 @@ const HeroSection: FC = () => (
 			<div className="flex w-full shrink-0 grow-0 basis-auto flex-col justify-center px-8 py-12 lg:px-16 xl:w-[70%]">
 				<div className="mb-8">
 					<div className="text-6xl font-black text-white xl:text-8xl 2xl:text-9xl">
-						Hi, I'm
+						Hello, I'm
 						<h1 className="ml-8 lg:ml-12">Lukas Wiklund</h1>
 					</div>
 				</div>
-				<p className="text-2xl text-white lg:text-3xl">A Software Engineer based in Gothenburg, Sweden.</p>
+				<p className="text-2xl leading-relaxed text-white lg:text-3xl">
+					Software Engineer turned startup founder.
+					<br />
+					Originally from Gothenburg, now based in Linköping, and spending winters in Spain.
+				</p>
 			</div>
 		</div>
 	</section>
