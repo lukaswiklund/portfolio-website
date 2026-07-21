@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { FC } from "react"
+import type { FC } from "react"
 
 import cosunoLogo from "./logos/cosuno.svg"
 import forentoLogo from "./logos/forento.svg"
@@ -37,8 +37,8 @@ const ExperienceSection: FC = () => (
 				<div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-transparent via-white/30 to-transparent" />
 			</div>
 			<ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-				{workItems.map(({ name, logo, link, description }, index) => (
-					<li key={index} className="group">
+				{workItems.map(({ name, logo, link, description }) => (
+					<li key={name} className="group">
 						<Link
 							href={link}
 							target="_blank"
@@ -48,7 +48,7 @@ const ExperienceSection: FC = () => (
 							<div className="absolute inset-0 bg-linear-to-br from-white/0 via-white/0 to-white/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 							<div className="relative mb-6 flex items-center justify-center rounded-lg bg-white/5 p-4">
 								<Image
-									className="h-[60px] w-auto transition-transform duration-500 group-hover:scale-110"
+									className="h-15 w-auto transition-transform duration-500 group-hover:scale-110"
 									alt={`${name}'s logo`}
 									src={logo}
 									width={240}
@@ -57,7 +57,9 @@ const ExperienceSection: FC = () => (
 								/>
 							</div>
 							<h3 className="relative mb-4 text-2xl font-bold text-white">{name}</h3>
-							<p className="relative grow text-base leading-relaxed text-light">{description}</p>
+							<p className="relative grow text-base leading-relaxed text-light">
+								{description}
+							</p>
 							<div className="relative mt-6 flex items-center text-sm font-medium text-white/60 opacity-0 transition-all duration-300 group-hover:translate-x-2 group-hover:opacity-100">
 								Visit →
 							</div>

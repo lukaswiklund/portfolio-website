@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FC } from "react"
+import type { FC } from "react"
 
 const projects = [
 	{
@@ -24,7 +24,9 @@ const PersonalProjectsSection: FC = () => (
 	<section className="bg-linear-to-b from-dark to-black py-24">
 		<div className="mx-auto max-w-7xl px-6 lg:px-8">
 			<div className="mb-16 text-center">
-				<h2 className="mb-4 text-5xl font-bold text-white lg:text-6xl">Personal projects</h2>
+				<h2 className="mb-4 text-5xl font-bold text-white lg:text-6xl">
+					Personal projects
+				</h2>
 				<div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-transparent via-white/30 to-transparent" />
 			</div>
 			<ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -42,7 +44,9 @@ const PersonalProjectsSection: FC = () => (
 									{name}
 								</h3>
 							</div>
-							<p className="relative mb-6 grow text-base leading-relaxed text-light">{description}</p>
+							<p className="relative mb-6 grow text-base leading-relaxed text-light">
+								{description}
+							</p>
 							<div className="relative flex items-center gap-2 text-sm font-medium text-white/60 opacity-0 transition-all duration-300 group-hover:translate-x-2 group-hover:opacity-100">
 								<span>Visit project</span>
 								<span className="text-lg">→</span>

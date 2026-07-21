@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { FC } from "react"
+import type { FC } from "react"
 
 import facebookLogo from "./logos/facebook.svg"
 import githubLogo from "./logos/github.svg"
@@ -37,8 +37,8 @@ const ContactSection: FC = () => (
 				<div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-transparent via-white/30 to-transparent" />
 			</div>
 			<ul className="flex flex-wrap justify-center gap-4 lg:gap-6">
-				{skills.map(({ name, logo, link }, index) => (
-					<li key={index}>
+				{skills.map(({ name, logo, link }) => (
+					<li key={name}>
 						<a
 							href={link}
 							target="_blank"

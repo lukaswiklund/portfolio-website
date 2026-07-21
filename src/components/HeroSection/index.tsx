@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { FC } from "react"
+import type { FC } from "react"
 
 import picture from "./picture.png"
 
@@ -30,7 +30,8 @@ const HeroSection: FC = () => (
 				<p className="text-2xl leading-relaxed text-white lg:text-3xl">
 					Software Engineer turned startup founder.
 					<br />
-					Originally from Gothenburg, now based in Linköping, and spending winters in Spain.
+					Originally from Gothenburg, now based in Linköping, and spending winters in
+					Spain.
 				</p>
 			</div>
 		</div>

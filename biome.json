@@ -1,0 +1,60 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.5.4/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": false
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineWidth": 100
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"preset": "recommended",
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"semicolons": "asNeeded"
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"sortBareImports": true,
+						"groups": [
+							["server-only", "client-only"],
+							":BLANK_LINE:",
+							"./sentry",
+							"dotenv/config",
+							":BLANK_LINE:",
+							[":NODE:", ":PACKAGE_WITH_PROTOCOL:", ":PACKAGE:", "!@forento/**"],
+							":BLANK_LINE:",
+							[":ALIAS:", "!~/assets/**"],
+							":BLANK_LINE:",
+							"~/assets/**",
+							":BLANK_LINE:",
+							":PATH:"
+						]
+					}
+				}
+			}
+		}
+	},
+	"css": { "parser": { "tailwindDirectives": true } }
+}
