@@ -4,49 +4,82 @@ import type { FC } from "react"
 import picture from "./picture.png"
 
 const HeroSection: FC = () => (
-	<section className="relative overflow-hidden bg-linear-to-br from-black via-black to-dark">
-		<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.03),transparent_50%)]" />
-		<div className="relative z-10 flex items-center justify-end gap-4 px-6 py-8 lg:px-12">
-			<Button label="LinkedIn" href="https://www.linkedin.com/in/lukas-wiklund/" />
-			<Button label="GitHub" href="https://github.com/Hadermite" />
-			<Button label="Facebook" href="https://www.facebook.com/LukasEGWiklund/" />
-		</div>
-		<div className="flex flex-col lg:flex-row xl:min-h-[70vh]">
-			<Image
-				alt="Picture of Lukas"
-				src={picture}
-				width={0}
-				height={0}
-				sizes="(max-width: 1024px) 100vw, 30vw"
-				className="hidden w-[30%] shrink-0 grow-0 basis-auto object-contain object-bottom-left xl:block"
-			/>
-			<div className="flex w-full shrink-0 grow-0 basis-auto flex-col justify-center px-8 py-12 lg:px-16 xl:w-[70%]">
-				<div className="mb-8">
-					<div className="text-6xl font-black text-white xl:text-8xl 2xl:text-9xl">
-						Hello, I'm
-						<h1 className="ml-8 lg:ml-12">Lukas Wiklund</h1>
-					</div>
+	<header
+		id="top"
+		className="relative min-h-screen overflow-hidden border-b border-ink/20 bg-paper"
+	>
+		<div className="paper-grain absolute inset-0 z-20 opacity-[0.09]" />
+		<nav className="relative z-30 flex items-center justify-between border-b border-ink/20 px-5 py-4 md:px-10 lg:px-14">
+			<a href="#top" className="text-lg font-black tracking-[-0.05em]" aria-label="Home">
+				LW<span className="text-signal">.</span>
+			</a>
+			<div className="flex items-center gap-5 text-sm font-bold md:gap-8">
+				<a className="transition-colors hover:text-signal" href="#work">
+					Work
+				</a>
+				<a className="transition-colors hover:text-signal" href="#projects">
+					Projects
+				</a>
+				<a className="transition-colors hover:text-signal" href="#contact">
+					Contact
+				</a>
+			</div>
+		</nav>
+
+		<div className="relative grid min-h-[calc(100vh-61px)] lg:grid-cols-[1.25fr_0.75fr]">
+			<div className="relative z-10 flex flex-col justify-between px-5 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16">
+				<div className="reveal flex items-center gap-3">
+					<span className="h-2.5 w-2.5 rounded-full bg-signal" />
+					<p className="eyebrow">Software engineer · Founder · Sweden</p>
 				</div>
-				<p className="text-2xl leading-relaxed text-white lg:text-3xl">
-					Software Engineer turned startup founder.
+
+				<div className="py-16 lg:py-10">
+					<p className="reveal reveal-delay-1 mb-4 text-xl font-bold md:text-2xl">
+						Hello, I’m
+					</p>
+					<h1 className="display-title reveal reveal-delay-2 max-w-[7ch]">
+						Lukas
+						<br />
+						Wiklund<span className="text-signal">.</span>
+					</h1>
+				</div>
+
+				<div className="reveal reveal-delay-3 grid gap-8 border-t border-ink/30 pt-6 md:grid-cols-[1fr_auto] md:items-end">
+					<p className="max-w-xl text-xl leading-snug font-bold md:text-2xl">
+						I build useful digital products and the companies behind them.
+					</p>
+					<a
+						href="#work"
+						className="arrow-link flex h-14 w-14 items-center justify-center rounded-full bg-ink text-2xl text-paper transition-transform hover:rotate-45"
+					>
+						<span className="sr-only">See my work</span>
+						<span className="arrow" aria-hidden="true">
+							↘
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<div className="relative min-h-[520px] overflow-hidden bg-sun lg:min-h-full">
+				<div className="absolute top-8 right-6 z-10 rounded-full border border-ink/30 px-4 py-2 text-xs font-bold tracking-wide uppercase md:right-10">
+					Based in Linköping
+				</div>
+				<div className="absolute top-[17%] left-[-8%] h-[62%] w-[116%] rounded-[50%] bg-signal md:left-[4%] md:w-[92%] lg:top-[20%] lg:left-[-7%] lg:w-[114%]" />
+				<Image
+					alt="Portrait of Lukas Wiklund"
+					src={picture}
+					priority
+					sizes="(max-width: 1024px) 100vw, 40vw"
+					className="absolute bottom-0 left-1/2 z-10 h-[92%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
+				/>
+				<p className="absolute right-4 bottom-5 z-20 max-w-40 text-right text-sm leading-tight font-bold text-paper md:right-8">
+					Gothenburg roots.
 					<br />
-					Originally from Gothenburg, now based in Linköping, and spending winters in
-					Spain.
+					Spanish winters.
 				</p>
 			</div>
 		</div>
-	</section>
-)
-
-const Button: FC<{ label: string; href: string }> = ({ label, href }) => (
-	<a
-		className="rounded-full border border-white/20 bg-white/5 px-5 py-2.5 font-opensans text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/10 hover:shadow-lg hover:shadow-white/10"
-		target="_blank"
-		rel="noopener noreferrer"
-		href={href}
-	>
-		{label}
-	</a>
+	</header>
 )
 
 export default HeroSection

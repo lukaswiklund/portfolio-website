@@ -1,66 +1,48 @@
-import Image from "next/image"
 import type { FC } from "react"
 
-import facebookLogo from "./logos/facebook.svg"
-import githubLogo from "./logos/github.svg"
-import linkedInLogo from "./logos/linkedin.svg"
-import mailLogo from "./logos/mail.svg"
-
-const skills = [
-	{
-		name: "Lukas Wiklund",
-		logo: linkedInLogo,
-		link: "https://www.linkedin.com/in/lukas-wiklund/",
-	},
-	{
-		name: "lukaswiklund",
-		logo: githubLogo,
-		link: "https://github.com/lukaswiklund/",
-	},
-	{
-		name: "Lukas Wiklund",
-		logo: facebookLogo,
-		link: "https://www.facebook.com/LukasEGWiklund/",
-	},
-	{
-		name: "hej@lukaswiklund.se",
-		logo: mailLogo,
-		link: "mailto:hej@lukaswiklund.se",
-	},
+const links = [
+	{ name: "LinkedIn", link: "https://www.linkedin.com/in/lukas-wiklund/" },
+	{ name: "GitHub", link: "https://github.com/lukaswiklund/" },
+	{ name: "Facebook", link: "https://www.facebook.com/LukasEGWiklund/" },
 ]
 
 const ContactSection: FC = () => (
-	<section className="bg-black py-24">
-		<div className="mx-auto max-w-7xl px-6 lg:px-8">
-			<div className="mb-16 text-center">
-				<h2 className="mb-4 text-5xl font-bold text-white lg:text-6xl">Get in touch</h2>
-				<div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-transparent via-white/30 to-transparent" />
+	<footer id="contact" className="bg-signal px-5 pt-24 pb-8 text-ink md:px-10 md:pt-32 lg:px-14">
+		<div className="mx-auto max-w-[1500px]">
+			<p className="eyebrow mb-8">04 / Contact</p>
+			<h2 className="section-title max-w-[10ch]">Say hello.</h2>
+			<a
+				href="mailto:hej@lukaswiklund.se"
+				className="arrow-link mt-12 inline-flex items-center gap-4 border-b-2 border-ink pb-2 text-xl font-black tracking-[-0.03em] md:text-4xl"
+			>
+				hej@lukaswiklund.se <span className="arrow">↗</span>
+			</a>
+
+			<div className="mt-24 flex flex-col gap-8 border-t border-ink/30 pt-7 md:mt-36 md:flex-row md:items-end md:justify-between">
+				<div>
+					<p className="text-xl font-black tracking-[-0.04em]">Lukas Wiklund</p>
+					<p className="mt-1 font-body text-sm">Software engineer & founder</p>
+				</div>
+				<ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold">
+					{links.map(({ name, link }) => (
+						<li key={name}>
+							<a
+								className="arrow-link"
+								href={link}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{name} <span className="arrow">↗</span>
+							</a>
+						</li>
+					))}
+				</ul>
+				<p className="font-body text-xs">
+					© {new Date().getFullYear()} · Linköping, Sweden
+				</p>
 			</div>
-			<ul className="flex flex-wrap justify-center gap-4 lg:gap-6">
-				{skills.map(({ name, logo, link }) => (
-					<li key={name}>
-						<a
-							href={link}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-linear-to-br from-dark to-black px-8 py-5 shadow-lg transition-all duration-500 hover:border-white/20 hover:shadow-xl hover:shadow-white/5"
-						>
-							<div className="rounded-lg bg-white/5 p-2 transition-all duration-500 group-hover:scale-110 group-hover:bg-white/10">
-								<Image
-									alt={`${name} logo`}
-									src={logo}
-									width={28}
-									height={28}
-									className="transition-transform duration-500"
-								/>
-							</div>
-							<p className="text-lg font-semibold text-white">{name}</p>
-						</a>
-					</li>
-				))}
-			</ul>
 		</div>
-	</section>
+	</footer>
 )
 
 export default ContactSection
