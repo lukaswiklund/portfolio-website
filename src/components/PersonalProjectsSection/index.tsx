@@ -3,9 +3,20 @@ import { FC } from "react"
 
 const projects = [
 	{
-		name: "Nuclear",
-		link: "https://nuclear.lukaswiklund.se",
-		description: "A personal project showcasing nuclear energy information and data visualization.",
+		name: "Nordic Nuclear Power",
+		link: "https://www.nordiskkarnkraft.se/en/se",
+		description: "An independent real-time reactor status service for Sweden and Finland.",
+	},
+	{
+		name: "BRF Radar",
+		link: "https://brfradar.se/",
+		description:
+			"Housing cooperative financial analysis that highlights risks and potential fee increases before you buy.",
+	},
+	{
+		name: "Sveriges Ekonomi",
+		link: "https://sverigesekonomi.se/",
+		description: "Tools and data for exploring Sweden's public and private economy.",
 	},
 ]
 
@@ -17,8 +28,8 @@ const PersonalProjectsSection: FC = () => (
 				<div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-transparent via-white/30 to-transparent" />
 			</div>
 			<ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-				{projects.map(({ name, link, description }, index) => (
-					<li key={index} className="group">
+				{projects.map(({ name, link, description }) => (
+					<li key={name} className="group">
 						<Link
 							href={link}
 							target="_blank"
