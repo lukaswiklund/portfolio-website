@@ -1,7 +1,7 @@
 import Image from "next/image"
 import type { FC } from "react"
 
-import picture from "./picture.png"
+import picture from "./picture.jpg"
 
 const HeroSection: FC = () => (
 	<header
@@ -60,18 +60,19 @@ const HeroSection: FC = () => (
 				</div>
 			</div>
 
-			<div className="relative min-h-[520px] overflow-hidden bg-sun lg:min-h-full">
-				<div className="absolute top-8 right-6 z-10 rounded-full border border-ink/30 px-4 py-2 text-xs font-bold tracking-wide uppercase md:right-10">
-					Based in Linköping
-				</div>
-				<div className="absolute top-[17%] left-[-8%] h-[62%] w-[116%] rounded-[50%] bg-signal md:left-[4%] md:w-[92%] lg:top-[20%] lg:left-[-7%] lg:w-[114%]" />
+			<div className="relative min-h-[560px] overflow-hidden bg-sun md:min-h-[720px] lg:min-h-full">
 				<Image
-					alt="Portrait of Lukas Wiklund"
+					alt="Lukas Wiklund on the rocks by the sea at sunset"
 					src={picture}
 					priority
+					placeholder="blur"
 					sizes="(max-width: 1024px) 100vw, 40vw"
-					className="absolute bottom-0 left-1/2 z-10 h-[92%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
+					className="absolute inset-0 h-full w-full object-cover object-[53%_42%]"
 				/>
+				<div className="absolute inset-x-0 bottom-0 z-10 h-1/3 bg-linear-to-t from-ink/60 to-transparent" />
+				<div className="absolute top-8 right-6 z-10 rounded-full border border-ink/20 bg-paper/75 px-4 py-2 text-xs font-bold tracking-wide uppercase backdrop-blur-sm md:right-10">
+					Based in Linköping
+				</div>
 				<p className="absolute right-4 bottom-5 z-20 max-w-40 text-right text-sm leading-tight font-bold text-paper md:right-8">
 					Gothenburg roots.
 					<br />
