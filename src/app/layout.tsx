@@ -1,4 +1,7 @@
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
+
+import LinkClickTracker from "~/components/LinkClickTracker"
 
 export const metadata: Metadata = {
 	title: "Lukas Wiklund",
@@ -19,7 +22,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 				<link rel="manifest" href="/favicon/site.webmanifest" />
 			</head>
-			<body>{children}</body>
+			<body>
+				{children}
+				<Analytics />
+				<LinkClickTracker />
+			</body>
 		</html>
 	)
 }

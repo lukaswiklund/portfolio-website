@@ -10,78 +10,51 @@ const workItems = [
 		name: "Forento",
 		logo: forentoLogo,
 		link: "https://forento.io",
-		meta: "Founder · EdTech SaaS",
+		role: "Founder",
 		description:
-			"A platform that gives creators everything they need to launch their own branded online course and digital content business.",
+			"A platform for creators who want to sell online courses and digital content under their own brand.",
 	},
 	{
 		name: "Cosuno",
 		logo: cosunoLogo,
 		link: "https://www.cosuno.com",
-		meta: "Software engineer · ConTech",
-		description:
-			"A collaborative SaaS product that modernises tendering and procurement for the construction industry.",
+		role: "Software engineer",
+		description: "Tendering and procurement software for the construction industry.",
 	},
 	{
 		name: "Inet",
 		logo: inetLogo,
 		link: "https://www.inet.se/",
-		meta: "Software engineer · Commerce",
-		description: "The web shop and retail systems behind Sweden’s most loved computer store.",
+		role: "Software engineer",
+		description: "The web shop and retail system for Sweden's most loved computer store.",
 	},
 ]
 
 const ExperienceSection: FC = () => (
-	<section id="work" className="relative bg-paper-light px-5 py-24 md:px-10 md:py-32 lg:px-14">
-		<div className="mx-auto max-w-[1500px]">
-			<div className="grid gap-10 pb-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-				<div>
-					<p className="eyebrow mb-5 text-signal">01 / Selected experience</p>
-					<h2 className="section-title">Work that moved things forward.</h2>
-				</div>
-				<p className="max-w-xl text-lg leading-relaxed text-muted lg:ml-auto lg:text-xl">
-					From retail systems to construction software and creator tools, I work where
-					product, engineering and business meet.
-				</p>
-			</div>
-
-			<ul className="border-t border-ink">
-				{workItems.map(({ name, logo, link, meta, description }, index) => (
-					<li key={name}>
-						<a
-							href={link}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="group grid gap-6 border-b border-ink/30 py-8 transition-colors hover:bg-sun/15 md:grid-cols-[70px_1fr_1.2fr_42px] md:items-center md:px-4 lg:py-10"
-						>
-							<p className="font-body text-sm text-muted">0{index + 1}</p>
-							<div>
-								<div className="mb-4 flex h-8 items-center justify-start">
-									<Image
-										src={logo}
-										alt=""
-										className="max-h-8 w-auto max-w-28 object-contain object-left brightness-0"
-									/>
-								</div>
-								<h3 className="text-3xl font-black tracking-[-0.04em] md:text-4xl">
-									{name}
-								</h3>
-								<p className="eyebrow mt-2 text-muted">{meta}</p>
-							</div>
-							<p className="max-w-2xl font-body text-base leading-relaxed text-muted md:text-lg">
-								{description}
-							</p>
-							<span
-								className="text-3xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-								aria-hidden="true"
-							>
-								↗
-							</span>
-						</a>
-					</li>
-				))}
-			</ul>
-		</div>
+	<section className="mt-20">
+		<h2 className="text-2xl font-bold">Work</h2>
+		<ul className="mt-6 border-t border-line">
+			{workItems.map(({ name, logo, link, role, description }) => (
+				<li
+					key={name}
+					className="grid gap-3 border-b border-line py-6 sm:grid-cols-[8rem_1fr] sm:gap-8"
+				>
+					<a href={link} className="flex h-7 items-center sm:mt-0.5">
+						<Image
+							src={logo}
+							alt={name}
+							className="h-6 w-auto max-w-32 brightness-0 dark:invert"
+						/>
+					</a>
+					<div>
+						<p className="font-bold">
+							{role} at <a href={link}>{name}</a>
+						</p>
+						<p className="mt-1 text-muted">{description}</p>
+					</div>
+				</li>
+			))}
+		</ul>
 	</section>
 )
 
