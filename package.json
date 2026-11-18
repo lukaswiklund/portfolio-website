@@ -14,21 +14,21 @@
 		"*": "biome check --write --no-errors-on-unmatched"
 	},
 	"dependencies": {
-		"@tailwindcss/postcss": "4.3.3",
+		"@tailwindcss/postcss": "4.3.5",
 		"@vercel/analytics": "2.0.1",
-		"next": "16.2.10",
-		"postcss": "8.5.20",
-		"react": "19.2.7",
-		"react-dom": "19.2.7",
-		"tailwindcss": "4.3.3"
+		"next": "16.4.6",
+		"postcss": "8.5.33",
+		"react": "19.3.1",
+		"react-dom": "19.3.1",
+		"tailwindcss": "4.3.5"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.5.4",
-		"@types/node": "24.13.3",
-		"@types/react": "19.2.17",
+		"@biomejs/biome": "2.6.8",
+		"@types/node": "24.19.2",
+		"@types/react": "19.3.0",
 		"husky": "9.1.7",
-		"lint-staged": "17.1.0",
-		"typescript": "6.0.3"
+		"lint-staged": "17.6.1",
+		"typescript": "7.0.2"
 	},
-	"packageManager": "pnpm@11.15.1+sha512.81350b07e53c9538a02f1f2303b4290fa2d7be04e56e2a970c4cc4b417dc761de196edabd49d55c7dc9580db81007c44143e4e3d7e462b3000d23c255122d065"
+	"packageManager": "pnpm@11.28.13+sha512.d5caa9cdcd6067ac2902f9f44daa00b1288a73babf1e98f4f375b3a7583b1894b4d49f7527da8f5e1530198bb10e03adba321a1f015429dc2946ce8a7a9a8c65"
 }
