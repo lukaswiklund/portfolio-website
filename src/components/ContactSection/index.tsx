@@ -8,9 +8,8 @@ const ContactSection: FC = () => (
 			<a href="mailto:hej@lukaswiklund.se">hej@lukaswiklund.se</a>
 		</p>
 		<p className="mt-6 text-muted">
-			I'm also on <a href="https://www.linkedin.com/in/lukas-wiklund/">LinkedIn</a>,{" "}
-			<a href="https://github.com/lukaswiklund/">GitHub</a> and{" "}
-			<a href="https://www.facebook.com/LukasEGWiklund/">Facebook</a>.
+			I'm also on <a href="https://www.linkedin.com/in/lukas-wiklund/">LinkedIn</a> and{" "}
+			<a href="https://github.com/lukaswiklund/">GitHub</a>.
 		</p>
 		<p className="mt-20 text-sm text-muted">© {new Date().getFullYear()} Lukas Wiklund</p>
 	</footer>
