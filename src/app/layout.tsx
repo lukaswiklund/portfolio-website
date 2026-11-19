@@ -6,7 +6,7 @@ import LinkClickTracker from "~/components/LinkClickTracker"
 export const metadata: Metadata = {
 	title: "Lukas Wiklund",
 	description:
-		"Hello, I'm Lukas Wiklund. Software Engineer turned startup founder. Originally from Gothenburg, now based in Linköping, and spending winters in Spain.",
+		"Hello, I'm Lukas Wiklund. Software engineer turned startup founder from Linköping, Sweden, who loves building products and is fascinated by electricity grids and electrification.",
 	metadataBase: new URL("https://lukaswiklund.se"),
 	openGraph: { images: [{ url: "/lukas.png", width: 1536, height: 2048 }] },
 	alternates: { canonical: "/" },
