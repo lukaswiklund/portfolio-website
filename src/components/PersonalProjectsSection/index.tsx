@@ -21,17 +21,17 @@ const projects = [
 		description: "Live status of the nuclear reactors in Sweden and Finland.",
 	},
 	{
+		name: "Sveriges Ekonomi",
+		link: "https://sverigesekonomi.se/",
+		screenshot: sverigesEkonomi,
+		description: "Tools and data for exploring Sweden's public and private economy.",
+	},
+	{
 		name: "BRF Radar",
 		link: "https://brfradar.se/",
 		screenshot: brfRadar,
 		description:
 			"Goes through a housing cooperative's finances and points out risks and likely fee increases before you buy an apartment.",
-	},
-	{
-		name: "Sveriges Ekonomi",
-		link: "https://sverigesekonomi.se/",
-		screenshot: sverigesEkonomi,
-		description: "Tools and data for exploring Sweden's public and private economy.",
 	},
 ]
 
